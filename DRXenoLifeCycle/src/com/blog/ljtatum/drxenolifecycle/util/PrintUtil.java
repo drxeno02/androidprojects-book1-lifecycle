@@ -1,9 +1,8 @@
-/** Project and code provided by Leonard Tatum, A.K.A DRXeno
+/** Project and code provided by Leonard Tatum
  * For any questions or comments regarding the use of this code
  * or issues please contact LJTATUM@HOTMAIL.COM
  * ONLINE MOBILE TUTORIALS: ljtatum.blog.com/
- * CODEBASE: http://ljtatum.blog.com/codebase_two/ 
- * Reference Link: http://developer.android.com/training/basics/activity-lifecycle/index.html */
+ * GITHUB: https://github.com/drxeno02/androidprojects-book1-lifecycle */
 
 package com.blog.ljtatum.drxenolifecycle.util;
 
@@ -16,12 +15,14 @@ public class PrintUtil {
 
 	private static CycleTracker mCycleTracker = CycleTracker.getInstance();
 
-	/*
+	/**
 	 * This method prints out the lifecycle state of each Activity A/B/C. There
 	 * is an added time delay around a wrapped Handler
 	 * 
-	 * @param viewMethods TextView to list out the lifecycle methods called
-	 * @param viewCycle TextView to list out the cycle of all Activity classes
+	 * @param viewMethods
+	 *            TextView to list out the lifecycle methods called
+	 * @param viewCycle
+	 *            TextView to list out the cycle of all Activity classes
 	 */
 	public static void printCycle(final TextView viewMethods,
 			final TextView viewCycle) {
@@ -42,8 +43,7 @@ public class PrintUtil {
 				// Get the status of all Activity classes and print to TextView
 				StringBuilder sbCycle = new StringBuilder();
 				for (String key : mCycleTracker.keySet()) {
-					sbCycle.insert(0, key + ": " + mCycleTracker.getCycle(key)
-							+ "\n");
+					sbCycle.insert(0, key + ": " + mCycleTracker.getCycle(key) + "\n");
 				}
 				if (viewCycle != null) {
 					viewCycle.setText(sbCycle.toString());

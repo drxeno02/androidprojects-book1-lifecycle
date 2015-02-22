@@ -1,9 +1,8 @@
-/** Project and code provided by Leonard Tatum, A.K.A DRXeno
+/** Project and code provided by Leonard Tatum
  * For any questions or comments regarding the use of this code
  * or issues please contact LJTATUM@HOTMAIL.COM
  * ONLINE MOBILE TUTORIALS: ljtatum.blog.com/
- * CODEBASE: http://ljtatum.blog.com/codebase_two/ 
- * Reference Link: http://developer.android.com/training/basics/activity-lifecycle/index.html */
+ * GITHUB: https://github.com/drxeno02/androidprojects-book1-lifecycle */
 
 package com.blog.ljtatum.drxenolifecycle;
 
@@ -97,14 +96,6 @@ public class ActivityA extends Activity {
         startActivity(intent);
     }
 
-    
-    /* To familiarize yourself with errors, see what happens when you attempt 
-     * to finish on an Activity that isn't referenced. Change the line 
-     * "ActivityA.this.finish()" to "ActivityB.this.finish()" or 
-     * "ActivityC.this.finish". It is important to learn and recognize various 
-     * errors. This will bring up a java.land.IllegalStateException. Meaning that 
-     * the system is unable to find the appropriate method view, because you are 
-     * referencing the wrong one */
     public void finishActivityA(View v) {
         ActivityA.this.finish();
     }
